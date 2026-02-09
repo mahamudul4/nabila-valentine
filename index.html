@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Valentine's Day, My Love! 💕</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Animated Hearts Background -->
+    <div class="hearts-container" id="heartsContainer"></div>
+    
+    <!-- Rose Petals Falling -->
+    <canvas id="petalsCanvas"></canvas>
+
+    <!-- Main Container -->
+    <div class="main-container">
+        <!-- Opening Card -->
+        <div class="opening-card" id="openingCard">
+            <div class="envelope">
+                <div class="envelope-flap"></div>
+                <div class="envelope-body">
+                    <div class="letter">
+                        <h2>For My Beloved</h2>
+                        <p>Nabila Islam</p>
+                        <button class="open-btn" id="openBtn">Open with Love 💕</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Main Content (Hidden Initially) -->
+        <div class="content-wrapper" id="contentWrapper">
+            <!-- Header -->
+            <header class="header">
+                <div class="heart-burst">
+                    <span class="heart">❤️</span>
+                    <span class="heart">💖</span>
+                    <span class="heart">💕</span>
+                </div>
+                <h1 class="main-title">
+                    <span class="word" style="--i:0">Happy</span>
+                    <span class="word" style="--i:1">Valentine's</span>
+                    <span class="word" style="--i:2">Day!</span>
+                </h1>
+                <p class="subtitle">To the love of my life</p>
+            </header>
+
+            <!-- Love Letter Section -->
+            <section class="love-letter">
+                <div class="letter-paper">
+                    <div class="paper-decoration">🌹</div>
+                    <h2 class="letter-title">My Dearest Nabila,</h2>
+                    <div class="letter-content">
+                        <p class="love-paragraph">
+                            Every moment with you feels like a beautiful dream that I never want to end. 
+                            You are the sunshine that brightens my darkest days, the melody that makes 
+                            my heart sing, and the reason behind every smile on my face.
+                        </p>
+                        <p class="love-paragraph">
+                            Your love has transformed my world into something magical. With you, I've 
+                            discovered what it truly means to love and be loved. You are my best friend, 
+                            my soulmate, and my everything. Each day with you is a precious gift that 
+                            I treasure with all my heart.
+                        </p>
+                        <p class="love-paragraph">
+                            On this Valentine's Day, I want you to know that you are more loved than 
+                            you could ever imagine. You make me want to be a better person, and I'm 
+                            grateful for every second we spend together. Thank you for being you, for 
+                            loving me, and for making my life complete.
+                        </p>
+                        <p class="love-paragraph highlight-text">
+                            I love you more than words could ever express. Today, tomorrow, and forever. 💖
+                        </p>
+                    </div>
+                    <div class="signature-section">
+                        <p class="forever-yours">Forever Yours,</p>
+                        <p class="signature-name">Mahamudul Hasan</p>
+                        <div class="signature-hearts">❤️💕💖</div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Reasons I Love You -->
+            <section class="reasons-section">
+                <h2 class="section-title">
+                    <span class="title-heart">💝</span>
+                    Reasons Why I Love You
+                    <span class="title-heart">💝</span>
+                </h2>
+                <div class="reasons-grid">
+                    <div class="reason-card" style="--delay: 0s">
+                        <div class="reason-icon">😊</div>
+                        <h3>Your Smile</h3>
+                        <p>Your beautiful smile lights up my entire world and makes everything better</p>
+                    </div>
+                    <div class="reason-card" style="--delay: 0.2s">
+                        <div class="reason-icon">💫</div>
+                        <h3>Your Spirit</h3>
+                        <p>Your amazing spirit and positive energy inspire me every single day</p>
+                    </div>
+                    <div class="reason-card" style="--delay: 0.4s">
+                        <div class="reason-icon">🌟</div>
+                        <h3>Your Intelligence</h3>
+                        <p>Your brilliant mind and wisdom never cease to amaze me</p>
+                    </div>
+                    <div class="reason-card" style="--delay: 0.6s">
+                        <div class="reason-icon">💖</div>
+                        <h3>Your Heart</h3>
+                        <p>Your kindness and compassion make you the most beautiful person I know</p>
+                    </div>
+                    <div class="reason-card" style="--delay: 0.8s">
+                        <div class="reason-icon">✨</div>
+                        <h3>Your Presence</h3>
+                        <p>Just being with you makes every moment feel special and magical</p>
+                    </div>
+                    <div class="reason-card" style="--delay: 1s">
+                        <div class="reason-icon">🌹</div>
+                        <h3>Everything</h3>
+                        <p>I love everything about you - you are perfect just the way you are!</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Love Counter -->
+            <section class="love-counter">
+                <div class="counter-card">
+                    <h2 class="counter-title">Our Love Grows Stronger</h2>
+                    <div class="counter-display">
+                        <div class="counter-item">
+                            <div class="counter-number" id="seconds">0</div>
+                            <div class="counter-label">Seconds of Love</div>
+                        </div>
+                        <div class="counter-item">
+                            <div class="counter-number" id="heartbeats">0</div>
+                            <div class="counter-label">Heartbeats for You</div>
+                        </div>
+                        <div class="counter-item">
+                            <div class="counter-number" id="smiles">0</div>
+                            <div class="counter-label">Smiles Because of You</div>
+                        </div>
+                    </div>
+                    <p class="counter-subtitle">...and counting! ❤️</p>
+                </div>
+            </section>
+
+            <!-- Interactive Love Messages -->
+            <section class="interactive-section">
+                <h2 class="section-title">
+                    <span class="title-heart">💌</span>
+                    Click the Hearts to Reveal Love Messages
+                    <span class="title-heart">💌</span>
+                </h2>
+                <div class="hearts-grid">
+                    <div class="message-heart" data-message="You make my heart skip a beat! 💓">
+                        <div class="heart-icon">❤️</div>
+                    </div>
+                    <div class="message-heart" data-message="You are my forever and always! 💕">
+                        <div class="heart-icon">💖</div>
+                    </div>
+                    <div class="message-heart" data-message="Every love song reminds me of you! 🎵">
+                        <div class="heart-icon">💗</div>
+                    </div>
+                    <div class="message-heart" data-message="You complete me in every way! ✨">
+                        <div class="heart-icon">💝</div>
+                    </div>
+                    <div class="message-heart" data-message="I fall in love with you more each day! 🌹">
+                        <div class="heart-icon">💘</div>
+                    </div>
+                    <div class="message-heart" data-message="You are my dream come true! 🌟">
+                        <div class="heart-icon">💞</div>
+                    </div>
+                </div>
+                <div class="message-display" id="messageDisplay"></div>
+            </section>
+
+            <!-- Photo Memory Box -->
+            <section class="memory-section">
+                <h2 class="section-title">
+                    <span class="title-heart">📸</span>
+                    Our Beautiful Moments
+                    <span class="title-heart">📸</span>
+                </h2>
+                <div class="polaroid-container">
+                    <div class="polaroid" style="--rotate: -5deg">
+                        <div class="polaroid-image with-photo">
+                            <img src="1.jpeg" alt="Our Beautiful Moment" class="polaroid-photo">
+                        </div>
+                        <p class="polaroid-caption">Forever & Always</p>
+                    </div>
+                    <div class="polaroid" style="--rotate: 3deg">
+                        <div class="polaroid-image with-photo">
+                            <img src="1.jpeg" alt="Our Love" class="polaroid-photo">
+                        </div>
+                        <p class="polaroid-caption">Every Moment</p>
+                    </div>
+                    <div class="polaroid" style="--rotate: -3deg">
+                        <div class="polaroid-image with-photo">
+                            <img src="1.jpeg" alt="Together Forever" class="polaroid-photo">
+                        </div>
+                        <p class="polaroid-caption">Endless Love</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Final Message -->
+            <section class="final-message">
+                <div class="final-card">
+                    <div class="rose-decoration">🌹🌹🌹</div>
+                    <h2 class="final-title">You Are My Everything</h2>
+                    <p class="final-text">
+                        Thank you for being the most amazing wife anyone could ask for. 
+                        You fill my life with love, joy, and endless happiness. 
+                        I promise to love you, cherish you, and make you smile every single day.
+                    </p>
+                    <div class="final-heart">
+                        <div class="beating-heart">❤️</div>
+                    </div>
+                    <p class="final-signature">
+                        Happy Valentine's Day, My Love!<br>
+                        <strong>- Your Husband, Mahamudul Hasan</strong>
+                    </p>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <!-- Floating Action Button -->
+    <button class="music-toggle" id="musicToggle" title="Toggle Music">
+        🎵
+    </button>
+
+    <script src="script.js"></script>
+</body>
+</html>
